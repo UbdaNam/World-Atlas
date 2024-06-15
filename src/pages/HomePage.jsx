@@ -1,19 +1,19 @@
-import { useDispatch, useSelector } from "react-redux";
-import CountryFilter from "../components/CountryFilter";
-import CountryList from "../components/CountryList";
+import { useDispatch, useSelector } from 'react-redux';
+import CountryFilter from '../components/CountryFilter';
+import CountryList from '../components/CountryList';
 import {
   countriesSelector,
   fetchCountries,
-} from "../redux/countries/countriesSlice";
-import "../stylesheets/homePage.css";
-import { useEffect, useState } from "react";
-import Loading from "../components/Loading";
-import ErrorMessage from "../components/ErrorMessage";
-import Pagination from "../components/Pagination";
+} from '../redux/countries/countriesSlice';
+import '../stylesheets/homePage.css';
+import { useEffect, useState } from 'react';
+import Loading from '../components/Loading';
+import ErrorMessage from '../components/ErrorMessage';
+import Pagination from '../components/Pagination';
 
 const HomePage = () => {
   const [currentCountries, setCurrentCountries] = useState([]);
-  const [countriesPerPage] = useState(10);
+  const [countriesPerPage] = useState(12);
   const [currentPageNumber, setCurrentPageNumber] = useState(1);
   const { isLoading, error } = useSelector(countriesSelector);
 

@@ -1,6 +1,6 @@
 .list-container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: 0.7rem;
   margin-block: 1rem;
   list-style: none;
