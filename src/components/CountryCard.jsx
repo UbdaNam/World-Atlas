@@ -1,13 +1,21 @@
-import "../stylesheets/countryCard.css";
+import '../stylesheets/countryCard.css';
 
 const CountryCard = ({ country }) => {
+  console.log(country);
   return (
-    <li className="list-item">
-      <h2>Country: {country.name}</h2>
-      <h3>Region: {country.region}</h3>
-      <p>
-        Area: {country?.area?.toLocaleString()} Km<sup>2</sup>
-      </p>
+    <li className='list-item'>
+      <div className='card-title'>
+        <div className='flag'>
+          <img src={country.flags.svg} alt={`${country.name} flag`} />
+        </div>
+        <h2>{country.name}</h2>
+      </div>
+      <div className='card-body'>
+        <h3>Region: {country.region}</h3>
+        <p>
+          Area: {country?.area?.toLocaleString()} Km<sup>2</sup>
+        </p>
+      </div>
     </li>
   );
 };

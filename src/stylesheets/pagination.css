@@ -5,13 +5,13 @@
   justify-content: center;
   align-self: center;
   gap: 0.3rem;
-  margin-bottom: 1rem;
+  margin-block: 1rem 2rem;
 }
 
 .page-number {
   border-radius: 50%;
-  width: 25px;
-  height: 25px;
+  width: 27px;
+  aspect-ratio: 1;
   background-color: #dededf;
   border: none;
   cursor: pointer;
@@ -27,6 +27,6 @@
 
 .skip-backward-icon,
 .fast-forward-icon {
-  font-size: 22px;
+  font-size: 24px;
   cursor: pointer;
 }
