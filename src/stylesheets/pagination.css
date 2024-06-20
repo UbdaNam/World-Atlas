@@ -18,7 +18,7 @@
 }
 
 .page-numbers-container .active {
-  background-color: #181717;
+  background-color: #1e1717;
   color: #fff;
   scale: 1.1;
   transform: translateY(-2px);
