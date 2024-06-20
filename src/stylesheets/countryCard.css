@@ -1,21 +1,26 @@
 .list-item {
   background-color: #ccffcc;
   padding: 1rem;
-  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 60px;
+  border-radius: 20px;
 }
 
 .list-item:hover {
   background-color: #9af59a;
 }
 
+.list-item:hover .more-btn {
+  background-color: #56f556;
+}
+
 .card-title {
   display: flex;
   align-items: center;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .card-title .flag {
@@ -30,6 +35,13 @@
   border-radius: 50%;
 }
 
+.card-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .card-body h2 {
   font-size: 24px;
 }
@@ -42,6 +54,42 @@
 .card-body p {
   font-size: 16px;
   opacity: 0.6;
+}
+
+.more-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #abe2ab;
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  overflow: hidden;
+  max-width: 35px;
+  aspect-ratio: 1;
+  cursor: pointer;
+  transition: max-width 400ms ease-in-out, background-color 250ms ease-in-out;
+  -webkit-transition: max-width 400ms ease-in-out,
+    background-color 250ms ease-out;
+  -moz-transition: max-width 400ms ease-in-out,
+    background-color 250ms ease-in-out;
+}
+
+.more-btn span {
+  display: none;
+}
+
+.more-btn:hover {
+  gap: 5px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  max-width: 100%;
+  aspect-ratio: unset;
+  background-color: #47ec47;
+}
+
+.more-btn:hover span {
+  display: block;
 }
 
 a {
